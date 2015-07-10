@@ -1,0 +1,13 @@
+{
+  "name": "module-name",
+  "version": "xx",
+  "description": "An example module to illustrate the usage of a package.json",
+  "author": "Your Name <you.name@example.org>",
+  "main": "lib/foo.js",
+  "dependencies": {
+    "node": ">=0.12.2",
+    "mocha": ">=2.2.5",
+  },
+  "analyze": true,
+  "license": "MIT"
+}
