@@ -13,9 +13,12 @@ Initial Commit on 7th July 2015
 # Version 0.0.1 on 10th July 2015
 - Make sure node is installed on you machine
 - You can run the program in your terminal
+
 	node main.js < example.data
-- You can run the test using mocha in your terminal
-	cd test && mocha
+
+- You can run the test using mocha in your terminal (in ./test)
+
+	mocha
 
 To-dos:
 - Use Mocha framework to cover unit tests in pool.js and place_pool.js (1 day)
