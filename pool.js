@@ -16,8 +16,7 @@ var Pool = function(rate, product){
     };
 
     this.printDividend =  function(selection) {
-      var formatter = "%s:%s:$%s";
-      if(this.product_type === 'W'){
+            if(this.product_type === 'W'){
         this.product_type = 'Win';
       }else if(this.product_type === 'E'){
         this.product_type = 'Exacta';
@@ -33,8 +32,7 @@ var Pool = function(rate, product){
       } else{
         dividend = 0.0
       }
-      var digit = Math.round(dividend * Math.pow(10, 2)) / Math.pow(10, 2);
-      console.log("%s:%s:$%s", this.product_type,selection,digit);
+      console.log("%s:%s:$%.2f", this.product_type,selection,dividend.toFixed(2))
     };
     this.clearPool = function() {
       this.total_pool = 0

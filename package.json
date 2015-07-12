@@ -1,12 +1,21 @@
 {
-  "name": "module-name",
-  "version": "xx",
-  "description": "An example module to illustrate the usage of a package.json",
-  "author": "Your Name <you.name@example.org>",
-  "main": "lib/foo.js",
+  "name": "node_tab/tote bet caculator",
+  "version": "0.0.1",
+  "description": "A stdin/stdout tote bet caculator using Node.js",
+  "author": "Austin Wangwanghan33@gmail.com>",
+  "main": "main.js",
+  "files": [
+    "test",
+    "test.js"
+    "main.js",
+    "pool.js",
+    "place_pool.js",
+    "test.data",
+    "example.data"
+  ],
   "dependencies": {
-    "node": ">=0.12.2",
-    "mocha": ">=2.2.5",
+    "node": "~0.12.2",
+    "mocha": "~2.2.5"
   },
   "analyze": true,
   "license": "MIT"
