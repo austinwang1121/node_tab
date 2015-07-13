@@ -6,10 +6,10 @@
   "main": "main.js",
   "files": [
     "test",
+    "data",
     "test.js",
     "main.js",
     "pool.js",
-    "place_pool.js",
     "test.data",
     "example.data"
   ],

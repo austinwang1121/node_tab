@@ -63,10 +63,6 @@ rl.on('line', function (line) {
         var selections = first + ','+second
         console.log('Exacta:'+selections+':'+exacta_pool.calculateDividend(selections))
 
-        // # clear the pool after the dividends are printed in case there is more input coming (if there is any)
-        win_pool.clearPool()
-        place_pool.clearPool()
-        exacta_pool.clearPool()
       } else{
         console.error("Invalid Input as a Result: " + line)
         process.exit()

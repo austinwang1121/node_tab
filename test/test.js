@@ -2,7 +2,6 @@ var assert = require("assert")
 var should = require("should")
 var Utils = require("../lib/utils.js").Util
 var Pool = require("../lib/pool.js").Pool
-var PlacePool = require("../lib/place_pool.js").PlacePool
 
 // describe('Array', function() {
 //   describe('#indexOf()', function () {
