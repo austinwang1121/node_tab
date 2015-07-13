@@ -1,7 +1,7 @@
 var readline = require('readline');
-var Pool = require("./pool.js").Pool;
-var PlacePool = require("./place_pool.js").PlacePool;
-var Utils = require("./utils.js").Util;
+var Pool = require("./lib/pool.js").Pool;
+var PlacePool = require("./lib/place_pool.js").PlacePool;
+var Utils = require("./lib/utils.js").Util;
 
 var win_pool = new Pool(0.15,'W');
 var place_pool  = new PlacePool(0.12,'P')
@@ -17,6 +17,7 @@ rl.on('line', function (line) {
   if(!line.trim()){
   }else if(break_down.length != 4){
     console.error("Invalid input format: " + line);
+    process.exit()
   } else if (break_down[0] === 'Bet'){
      // we could have a class Bet but it is not needed in our case
     // Selections will be validate as non-negative integers, but we'll store them in a dic as a string
@@ -28,13 +29,13 @@ rl.on('line', function (line) {
 
     if(product === 'W'){
       ret = win_pool.updatePool(stake,selections)
-      console.log(win_pool.horse_stake)
+      // console.log(win_pool.horse_stake)
     } else if(product === 'P'){
       ret = place_pool.updatePool(stake,selections)
-      console.log(place_pool.horse_stake)
+      // console.log(place_pool.horse_stake)
     } else if (product === 'E'){
       ret = exacta_pool.updatePool(stake,selections)
-      console.log(exacta_pool.horse_stake)
+      // console.log(exacta_pool.horse_stake)
     } else{
       ret = 'BAD'
       console.error("Invalid input as a Bet: " + line)

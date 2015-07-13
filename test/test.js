@@ -1,8 +1,8 @@
 var assert = require("assert")
 var should = require("should")
-var Utils = require("../utils.js").Util
-var Pool = require("../pool.js").Pool
-var PlacePool = require("../place_pool.js").PlacePool
+var Utils = require("../lib/utils.js").Util
+var Pool = require("../lib/pool.js").Pool
+var PlacePool = require("../lib/place_pool.js").PlacePool
 
 // describe('Array', function() {
 //   describe('#indexOf()', function () {
