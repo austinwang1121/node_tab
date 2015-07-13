@@ -13,6 +13,9 @@
     "test.data",
     "example.data"
   ],
+  "scripts": {
+    "test": "mocha --recursive --timeout 15000 -R spec --require should --harmony test/ --bail"
+  },
   "dependencies": {
     "node": "*",
     "mocha": "*"
