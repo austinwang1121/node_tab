@@ -27,6 +27,7 @@ rl.on('line', function (line) {
     var stake = break_down[3];
     var ret = 'OK'
 
+    // This block of code is quite ugly. Any better idea?
     if(product === 'W'){
       ret = win_pool.updatePool(stake,selections)
       // console.log(win_pool.horse_stake)
