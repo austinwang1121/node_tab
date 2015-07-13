@@ -1,12 +1,12 @@
 {
-  "name": "node_tab/tote bet caculator",
+  "name": "node_tab",
   "version": "0.0.1",
   "description": "A stdin/stdout tote bet caculator using Node.js",
   "author": "Austin Wangwanghan33@gmail.com>",
   "main": "main.js",
   "files": [
     "test",
-    "test.js"
+    "test.js",
     "main.js",
     "pool.js",
     "place_pool.js",
@@ -14,8 +14,8 @@
     "example.data"
   ],
   "dependencies": {
-    "node": "~0.12.2",
-    "mocha": "~2.2.5"
+    "node": "*",
+    "mocha": "*"
   },
   "analyze": true,
   "license": "MIT"

@@ -5,8 +5,9 @@ var PlacePool = function(rate, product)
     this.printDividends = function(first, second, third)
     {
       this.total_pool = this.total_pool * 1.0 / 3.0;
-      this.printDividend(first);
-      this.printDividend(second);
+      
+      return this.printDividend(first)+'\n'+
+      this.printDividend(second)+'\n' +
       this.printDividend(third);
     }
   }

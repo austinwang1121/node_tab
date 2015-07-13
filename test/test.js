@@ -39,15 +39,15 @@ describe('Utils', function() {
   });
 });
 
-// describe('Utils', function() {
-//   describe('#isPositiveInt()', function () {
-//     it('isPositiveInt method test', function () {
-//       assert.equal(true, new Boolean(Utils.isPositiveInt('9')))
-//       assert.equal(true, new Boolean(Utils.isPositiveInt('09')))
-//       assert.equal(true, new Boolean(Utils.isPositiveInt('009')))
+describe('Utils', function() {
+  describe('#isPositiveInt()', function () {
+    it('isPositiveInt method test', function () {
+      assert.equal(true, new Boolean(Utils.isPositiveInt('9')))
+      assert.equal(true, new Boolean(Utils.isPositiveInt('09')))
+      assert.equal(true, new Boolean(Utils.isPositiveInt('009')))
 
-//       assert.equal(false, new Boolean(Utils.isPositiveInt('-9')))
-//       assert.equal(false, new Boolean(Utils.isPositiveInt('0.9')))
-//     });
-//   });
-// });
+      assert.equal(false, new Boolean(Utils.isPositiveInt('-9')))
+      assert.equal(false, new Boolean(Utils.isPositiveInt('0.9')))
+    });
+  });
+});

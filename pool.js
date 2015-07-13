@@ -1,22 +1,32 @@
+var Utils = require("./utils.js").Util;
+
 var Pool = function(rate, product){
     this.total_pool = 0;
     this.product_type = product;
     this.commision_rate = rate;
     this.horse_stake = {};
     this.updatePool = function(stake, selection) {
-      this.total_pool += stake;
-      if(this.horse_stake[selection]){
-        // # horse has been bet on, update the stake
-        this.horse_stake[selection] += stake
+      if (Utils.isValidBet(this.product_type,selection,stake)) {
+        stake = parseInt(stake)
+        this.total_pool += stake;
+        if(this.horse_stake[selection]){
+          // # horse has been bet on, update the stake
+          this.horse_stake[selection] += stake
+        }
+        else{
+          // # create the stake for the given horse
+          this.horse_stake[selection] = stake
+        }
+        return 'OK'
       }
-      else{
-        // # create the stake for the given horse
-        this.horse_stake[selection] = stake
+      else {
+        return 'BAD'
       }
+
     };
 
     this.printDividend =  function(selection) {
-            if(this.product_type === 'W'){
+      if(this.product_type === 'W'){
         this.product_type = 'Win';
       }else if(this.product_type === 'E'){
         this.product_type = 'Exacta';
@@ -32,7 +42,7 @@ var Pool = function(rate, product){
       } else{
         dividend = 0.0
       }
-      console.log("%s:%s:$%.2f", this.product_type,selection,dividend.toFixed(2))
+      return this.product_type+':'+selection+':'+dividend.toFixed(2);
     };
     this.clearPool = function() {
       this.total_pool = 0
@@ -43,16 +53,5 @@ var Pool = function(rate, product){
       return this.product_type;
     }
 }
-
-// var PlacePool = Class( 'PlacePool').extend(Pool,
-//   {
-//     'public printDividends': function(first, second, third)
-//     {
-//       this.total_pool = this.total_pool * 1.0 / 3.0;
-//       this.printDividend(first);
-//       this.printDividend(second);
-//       this.printDividend(third);
-//     }
-//   });
 
 exports.Pool = Pool;
