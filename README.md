@@ -28,3 +28,5 @@ To-dos:
 - (optional) Re-organize the file structure (1h)
 - (optional) Making the program a executable? (#! /usr/bin/node) (1h)
 - (optional) npm publish? (0.25 day)
+
+
