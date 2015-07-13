@@ -1,10 +1,10 @@
 var readline = require('readline');
 var Pool = require("./lib/pool.js").Pool;
-var PlacePool = require("./lib/place_pool.js").PlacePool;
+// var PlacePool = require("./lib/place_pool.js").PlacePool;
 var Utils = require("./lib/utils.js").Util;
-
-var win_pool = new Pool(0.15,'W');
-var place_pool  = new PlacePool(0.12,'P')
+  
+var win_pool    = new Pool(0.15,'W');
+var place_pool  = new Pool(0.12,'P')
 var exacta_pool = new Pool(0.18,'E');
 
 var rl = readline.createInterface({
@@ -50,10 +50,19 @@ rl.on('line', function (line) {
       var second = break_down[2]
       var third  = break_down[3]
       if (Utils.isValidResult(first,second,third)){
-        // # Print dividend
-        console.log(win_pool.printDividend(first))
-        console.log(place_pool.printDividends(first,second,third))
-        console.log(exacta_pool.printDividend(first+','+second))
+        // Print dividends for Win
+        console.log('Win:'+first+':'+win_pool.calculateDividend(first))
+
+        // Print dividends for Place
+        place_pool.total_pool = place_pool.total_pool * 1.0 / 3.0;
+        console.log('Place:'+first+':'+place_pool.calculateDividend(first))
+        console.log('Place:'+second+':'+place_pool.calculateDividend(second))
+        console.log('Place:'+third+':'+place_pool.calculateDividend(third))
+
+        // Print dividends for Exacta
+        var selections = first + ','+second
+        console.log('Exacta:'+selections+':'+exacta_pool.calculateDividend(selections))
+
         // # clear the pool after the dividends are printed in case there is more input coming (if there is any)
         win_pool.clearPool()
         place_pool.clearPool()
