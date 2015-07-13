@@ -51,17 +51,17 @@ rl.on('line', function (line) {
       var third  = break_down[3]
       if (Utils.isValidResult(first,second,third)){
         // Print dividends for Win
-        console.log('Win:'+first+':'+win_pool.calculateDividend(first))
+        console.log('Win:'+first+':$'+win_pool.calculateDividend(first))
 
         // Print dividends for Place
         place_pool.total_pool = place_pool.total_pool * 1.0 / 3.0;
-        console.log('Place:'+first+':'+place_pool.calculateDividend(first))
-        console.log('Place:'+second+':'+place_pool.calculateDividend(second))
-        console.log('Place:'+third+':'+place_pool.calculateDividend(third))
+        console.log('Place:'+first+':$'+place_pool.calculateDividend(first))
+        console.log('Place:'+second+':$'+place_pool.calculateDividend(second))
+        console.log('Place:'+third+':$'+place_pool.calculateDividend(third))
 
         // Print dividends for Exacta
         var selections = first + ','+second
-        console.log('Exacta:'+selections+':'+exacta_pool.calculateDividend(selections))
+        console.log('Exacta:'+selections+':$'+exacta_pool.calculateDividend(selections))
 
       } else{
         console.error("Invalid Input as a Result: " + line)
