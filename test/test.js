@@ -1,14 +1,16 @@
 var assert = require("assert")
-var Utils = require("../utils.js").Util
+var should = require("should")
+var Utils = require("../lib/utils.js").Util
+var Pool = require("../lib/pool.js").Pool
 
-describe('Array', function() {
-  describe('#indexOf()', function () {
-    it('should return -1 when the value is not present', function () {
-      assert.equal(-1, [1,2,3].indexOf(5));
-      assert.equal(-1, [1,2,3].indexOf(0));
-    });
-  });
-});
+// describe('Array', function() {
+//   describe('#indexOf()', function () {
+//     it('should return -1 when the value is not present', function () {
+//       assert.equal(-1, [1,2,3].indexOf(5));
+//       assert.equal(-1, [1,2,3].indexOf(0));
+//     });
+//   });
+// });
 
 describe('Utils', function() {
   describe('#isValidBet()', function () {
@@ -39,15 +41,15 @@ describe('Utils', function() {
   });
 });
 
-// describe('Utils', function() {
-//   describe('#isPositiveInt()', function () {
-//     it('isPositiveInt method test', function () {
-//       assert.equal(true, new Boolean(Utils.isPositiveInt('9')))
-//       assert.equal(true, new Boolean(Utils.isPositiveInt('09')))
-//       assert.equal(true, new Boolean(Utils.isPositiveInt('009')))
+describe('Utils', function() {
+  describe('#isPositiveInt()', function () {
+    it('isPositiveInt method test', function () {
+      assert.equal(true, new Boolean(Utils.isPositiveInt('9')))
+      assert.equal(true, new Boolean(Utils.isPositiveInt('09')))
+      assert.equal(true, new Boolean(Utils.isPositiveInt('009')))
 
-//       assert.equal(false, new Boolean(Utils.isPositiveInt('-9')))
-//       assert.equal(false, new Boolean(Utils.isPositiveInt('0.9')))
-//     });
-//   });
-// });
+      assert.equal(false, new Boolean(Utils.isPositiveInt('-9')))
+      assert.equal(false, new Boolean(Utils.isPositiveInt('0.9')))
+    });
+  });
+});

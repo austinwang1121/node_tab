@@ -28,3 +28,15 @@ To-dos:
 - (optional) Re-organize the file structure (1h)
 - (optional) Making the program a executable? (#! /usr/bin/node) (1h)
 - (optional) npm publish? (0.25 day)
+
+
+# Version 0.0.2 on 13th July 2015
+- All functions in pool.js testable
+- place_pool.js is removed
+- Re-organised the file structure
+- should is added to the folder
+- Validated package.json
+
+To-dos:
+- Use Mocha framework and should package to cover unit tests in pool.js (0.75 day)
+
