@@ -92,8 +92,8 @@ Initial Commit on 7th July 2015
 		  8 passing (16ms)
 
 
-## Commit logs
-# Version 0.0.1 on 10th July 2015
+# Commit logs
+## Version 0.0.1 on 10th July 2015
 
 To-dos:
 - Use Mocha framework to cover unit tests in pool.js and place_pool.js (1 day)
@@ -105,7 +105,7 @@ To-dos:
 - (optional) npm publish? (0.25 day)
 
 
-# Version 0.0.2 on 13th July 2015
+## Version 0.0.2 on 13th July 2015
 - All functions in pool.js testable
 - place_pool.js is removed
 - Re-organised the file structure
@@ -115,9 +115,15 @@ To-dos:
 To-dos:
 - Use Mocha framework and should package to cover unit tests in pool.js (0.75 day)
 
-# version 0.0.3 on 14th July 2015
+## version 0.0.3 on 14th July 2015
 - Unit tests cover all functions in utils.js and pool.js
 - ./package.json is tested with "npm install test"
 - ./node_modules is removed as no longer needed
 - Terminal print of stdin is turned off
 
+# Future Improvements
+
+- A Makefile file is a good idea
+- Make main.js a executable (#! /usr/bin/node)
+- npm publish this package? Grap a good package name first
+- Put some callback functions in my code to make it more node.js-style
