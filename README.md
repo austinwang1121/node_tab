@@ -11,7 +11,7 @@ Initial Commit on 7th July 2015
 - Unit test 100% coverage using mocha framework
 - Write a package.json within npm's specifics
 
-# Instructions:
+# Instructions
 
 - You need node installed on you machine. For more info please refer to: https://nodejs.org/
 - You need mocha (node test framework) installed on your machine. If not, you can intall the mocha package in your terminal (run as root/admin user):
@@ -92,6 +92,7 @@ Initial Commit on 7th July 2015
 		  8 passing (16ms)
 
 
+## Commit logs
 # Version 0.0.1 on 10th July 2015
 
 To-dos:
