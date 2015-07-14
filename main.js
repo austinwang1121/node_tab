@@ -8,7 +8,8 @@ var exacta_pool = new Pool(0.18,'E');
 
 var rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
+  terminal: false
 });
 
 rl.on('line', function (line) {

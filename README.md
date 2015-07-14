@@ -13,21 +13,35 @@ Initial Commit on 7th July 2015
 
 # Instructions:
 
-- Make sure node is installed on you machine. For more info please refer to: https://nodejs.org/
-- Make sure mocha is installed on your machine. If not, intall the mocha package in your terminal (run as root/admin user):
+- You need node installed on you machine. For more info please refer to: https://nodejs.org/
+- You need mocha (node test framework) installed on your machine. If not, you can intall the mocha package in your terminal (run as root/admin user):
 
 		$npm install -g mocha
 
-- Make sure that node and mocha on your machine:
+- Verify that node and mocha on your machine in your terminal:
 		
 		$node --version
 		v0.12.6
 		$mocha --version
 		2.2.5
 
-- You can run the program in your terminal
+- Clone the git repo into you machine:
 
-		$node main.js < example.data
+		git clone git@github.com:akirosai/node_tab.git
+
+
+- You can run the program in your terminal:
+
+		cd node_tab
+		$node main.js < data/example.data
+
+- Expected output of main.js in your terminal:
+		Win:2:$2.61
+		Place:2:$1.06
+		Place:3:$1.27
+		Place:1:$2.13
+		Exacta:2,3:$2.43
+
 
 - You can run the test using mocha in your terminal 
 
@@ -42,6 +56,35 @@ Initial Commit on 7th July 2015
 	2) run the unit test with npm:
 
 		$npm test
+
+- Expected output of unit test on your terminal:
+
+		  Utils
+		    #isValidBet()
+		      ✓ it should be true
+		Stake for a bet should be whole dollar, where stake = -30
+		Invalid Input as a Bet, possibly because of an unknown bet type, where type is given: D
+		Stake for a bet should be whole dollar, where stake = 30.0
+		Invalid Input as a Bet, possibly because of an unknown bet type, where type is given: EW
+		      ✓ it should be false
+		    #isValidResult()
+		      ✓ isValidResult method test
+		    #isPositiveInt()
+		      ✓ isPositiveInt method test
+
+		  Pool
+		    #win_pool.updatePool()
+		Stake for a bet should be whole dollar, where stake = -3
+		      ✓ win_pool objects can update pool with a valid bet and return BAD code as invalid input
+		    #exacta_pool.updatePool()
+		      ✓ exacta_pool objects can update pool with a valid bet and return BAD code as invalid input
+		    #place_pool.updatePool()
+		      ✓ place_pool objects can update pool with a valid bet and return BAD code as invalid input
+		    #calculateDividend()
+		      ✓ pool objects can calculateDividend with a given results
+
+
+		  8 passing (16ms)
 
 
 # Version 0.0.1 on 10th July 2015
@@ -68,6 +111,7 @@ To-dos:
 
 # version 0.0.3 on 14th July 2015
 - Unit tests cover all functions in utils.js and pool.js
-- package.json is tested with "npm install test"
-- node_modules is removed as no longer needed
+- ./package.json is tested with "npm install test"
+- ./node_modules is removed as no longer needed
+- Terminal print of stdin is turned off
 
