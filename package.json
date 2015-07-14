@@ -7,6 +7,7 @@
   "files": [
     "test",
     "data",
+    "lib",
     "test.js",
     "main.js",
     "pool.js",
