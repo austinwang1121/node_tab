@@ -1,8 +1,10 @@
-# march_2015
+# node_tab
+author: Austin Wang
+email: wanghan33@gmail.com
 
 Initial Commit on 7th July 2015
 
-# requirements
+# Requirements
 - This is a README Drive Development
 - Description: a stdin, stdout tote bet caculator using node.js (done)
 - Easy to compile and run (done)
