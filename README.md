@@ -124,6 +124,16 @@ To-dos:
 # Future Improvements
 
 - A Makefile file is a good idea
-- Make main.js a executable (#! /usr/bin/node)
+- Instructions to make main.js a executable
+
+		$ chmod -x ./main.js
+		$ sudo ln -s /Users/austinwang/node_tab/main.js /usr/local/bin/tote_bet_caculator
+		$ tote_bet_caculator < data/example.data 
+		Win:2:$2.61
+		Place:2:$1.06
+		Place:3:$1.27
+		Place:1:$2.13
+		Exacta:2,3:$2.43
+
 - npm publish this package? Grap a good package name first
 - Put some callback functions in my code to make it more node.js-style

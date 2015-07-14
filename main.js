@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var readline = require('readline');
 var Pool = require("./lib/pool.js").Pool;
 var Utils = require("./lib/utils.js").Util;
