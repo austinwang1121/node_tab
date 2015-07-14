@@ -54,6 +54,10 @@ Initial Commit on 7th July 2015
 
 		$npm install test
 
+		npm WARN package.json node_tab@0.0.3 No repository field.
+		test@0.6.0 node_modules/test
+		└── ansi-font@0.0.2
+
 	2) run the unit test with npm:
 
 		$npm test
