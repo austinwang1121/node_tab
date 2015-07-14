@@ -1,6 +1,6 @@
 {
   "name": "node_tab",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A stdin/stdout tote bet caculator using Node.js",
   "author": "Austin Wangwanghan33@gmail.com>",
   "main": "main.js",
@@ -14,7 +14,7 @@
     "example.data"
   ],
   "scripts": {
-    "test": "mocha --recursive --timeout 15000 -R spec --require should --harmony test/ --bail"
+    "test": "mocha --recursive --timeout 15000 -R spec --harmony test/ --bail"
   },
   "dependencies": {
     "node": "*",

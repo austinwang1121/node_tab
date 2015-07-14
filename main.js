@@ -1,10 +1,9 @@
 var readline = require('readline');
 var Pool = require("./lib/pool.js").Pool;
-// var PlacePool = require("./lib/place_pool.js").PlacePool;
 var Utils = require("./lib/utils.js").Util;
   
 var win_pool    = new Pool(0.15,'W');
-var place_pool  = new Pool(0.12,'P')
+var place_pool  = new Pool(0.12,'P');
 var exacta_pool = new Pool(0.18,'E');
 
 var rl = readline.createInterface({
@@ -30,16 +29,13 @@ rl.on('line', function (line) {
     // This block of code is quite ugly. Any better idea?
     if(product === 'W'){
       ret = win_pool.updatePool(stake,selections)
-      // console.log(win_pool.horse_stake)
     } else if(product === 'P'){
       ret = place_pool.updatePool(stake,selections)
-      // console.log(place_pool.horse_stake)
     } else if (product === 'E'){
       ret = exacta_pool.updatePool(stake,selections)
-      // console.log(exacta_pool.horse_stake)
     } else{
       ret = 'BAD'
-      console.error("Invalid input as a Bet: " + line)
+      console.error("Invalid input as a Bet, unknown product type: " + line)
     }
 
     if (ret === 'BAD') {
