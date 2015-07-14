@@ -36,6 +36,7 @@ Initial Commit on 7th July 2015
 		$node main.js < data/example.data
 
 - Expected output of main.js in your terminal:
+
 		Win:2:$2.61
 		Place:2:$1.06
 		Place:3:$1.27
