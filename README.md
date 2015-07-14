@@ -27,12 +27,12 @@ Initial Commit on 7th July 2015
 
 - Clone the git repo into you machine:
 
-		git clone git@github.com:akirosai/node_tab.git
+		$git clone git@github.com:akirosai/node_tab.git
 
 
 - You can run the program in your terminal:
 
-		cd node_tab
+		$cd node_tab
 		$node main.js < data/example.data
 
 - Expected output of main.js in your terminal:
